@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pets Information</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e5e8eeff',
+                        secondary: '#ccebe0ff',
+                        accent: '#bcd8ebff'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen py-8">
+   
+    <div class="site-container mx-auto max-w-6xl px-4">
+        <!-- Header -->
+         
+        <header class=" mb-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold text-sky-50">My Pets Information</h1>
+                <p class="text-lg text-sky-50 mt-2">If found, please contact me immediately</p>
+            </div>
+         </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Pet Navigation -->
+             
+            <div class="flex justify-center space-x-4 mb-8">
+                <button id="pet1-btn" class="nav-button px-6 py-3 bg-primary text-gray-400 rounded-full active-pet text-lg font-semibold">Maru</button>
+                <button id="pet2-btn" class="nav-button px-6 py-3 bg-secondary text-gray-400 rounded-full text-lg font-semibold">Panther</button>
+                <button id="pet3-btn" class="nav-button px-6 py-3 bg-accent text-gray-400 rounded-full text-lg font-semibold">Miso</button>
+            </div>
+            
+            <!-- Pet Information Cards -->
+            <div class="grid grid-cols-1 gap-8">
+                <!-- Buddy -->
+                <div id="pet1" class="pet-card glass-card active-pet ">
+                    <div class="flex flex-col md:flex-row ">
+                        <div class="md:w-1/3 mb-4 md:mb-0 ">
+                            <div class="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center " style="background-color: rgba(255, 255, 255, 0);">
+                                
+                                <img src="/assets/1.png" class="w-auto h-64 rounded-md">
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 md:pl-8">
+                            <h2 class="text-3xl font-bold text-primary ">Maru</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                                <div>
+                                    <h3 class="font-semibold text-primary">Breed</h3>
+                                    <p>Poodle and Shih Tzu</p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-primary">Age</h3>
+                                    <p>4 years</p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-primary">Color</h3>
+                                    <p>White</p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-primary">Weight</h3>
+                                    <p>65 lbs</p>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <h3 class="font-semibold text-primary">Distinguishing Features</h3>
+                                    <p>White patch on chest, floppy right ear</p>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <h3 class="font-semibold text-primary">Last Seen</h3>
+                                    <p>-</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="mt-6 pt-6 border-t border-gray-300">
+                        <h3 class="text-xl font-bold text-primary mb-4">If Found, Please Contact</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="font-semibold text-secondary"><i class="fas fa-user text-primary mr-2"></i>Owner Name</h4>
+                                <p>Zairen V. Lapid</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-secondary"><i class="fas fa-phone text-primary mr-2"></i>Phone</h4>
+                                <p>+63 945 375 5226</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-secondary"><i class="fas fa-envelope text-primary mr-2"></i>Email</h4>
+                                <p>lapidzairen@gmail.com</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-secondary"><i class="fas fa-map-marker-alt text-primary mr-2"></i>Address</h4>
+                                <p>413C Zarate Village, Pinsao Proper</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Luna -->
+                <div id="pet2" class="pet-card glass-card hidden">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/3 mb-4 md:mb-0">
+                            <div class="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center" style="background-color: rgba(255, 255, 255, 0.7);">
+                                <span class="text-6xl">🐈</span>
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 md:pl-8">
+                            <h2 class="text-3xl font-bold text-secondary">Panther</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                                <div>
+                                    <h3 class="font-semibold text-secondary">Breed</h3>
+                                    <p>Philippine Shorthair</p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-secondary">Age</h3>
+                                    <p>9 months</p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-secondary">Color</h3>
+                                    <p>Pure Black</p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-secondary">Weight</h3>
+                                    <p>12 lbs</p>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <h3 class="font-semibold text-secondary">Distinguishing Features</h3>
+                                    <p>Green eyes and crooked tail at the end</p>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <h3 class="font-semibold text-secondary">Last Seen</h3>
+                                    <p>-</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                                        <div class="mt-6 pt-6 border-t border-gray-300">
+                        <h3 class="text-xl font-bold text-primary mb-4">If Found, Please Contact</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="font-semibold text-secondary"><i class="fas fa-user text-primary mr-2"></i>Owner Name</h4>
+                                <p>Zairen V. Lapid</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-secondary"><i class="fas fa-phone text-primary mr-2"></i>Phone</h4>
+                                <p>+63 945 375 5226</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-secondary"><i class="fas fa-envelope text-primary mr-2"></i>Email</h4>
+                                <p>lapidzairen@gmail.com</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-secondary"><i class="fas fa-map-marker-alt text-primary mr-2"></i>Address</h4>
+                                <p>413C Zarate Village, Pinsao Proper</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Max -->
+                <div id="pet3" class="pet-card glass-card hidden">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/3 mb-4 md:mb-0">
+                            <div class="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center" style="background-color: rgba(255, 255, 255, 0.7);">
+                                <span class="text-6xl">🐈‍⬛</span>
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 md:pl-8">
+                            <h2 class="text-3xl font-bold text-accent">Miso</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                                <div>
+                                    <h3 class="font-semibold text-accent">Breed</h3>
+                                    <p>Persian</p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-accent">Age</h3>
+                                    <p>2 months</p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-accent">Color</h3>
+                                    <p>White</p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-accent">Weight</h3>
+                                    <p>4 lbs</p>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <h3 class="font-semibold text-accent">Distinguishing Features</h3>
+                                    <p>Gray patch on the forehead</p>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <h3 class="font-semibold text-accent">Last Seen</h3>
+                                    <p>-</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="mt-6 pt-6 border-t border-gray-300">
+                        <h3 class="text-xl font-bold text-accent mb-4">If Found, Please Contact</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="font-semibold text-accent"><i class="fas fa-user text-accent mr-2"></i>Owner Name</h4>
+                                <p>John Smith</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-accent"><i class="fas fa-phone text-accent mr-2"></i>Phone</h4>
+                                <p>(555) 123-4567</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-accent"><i class="fas fa-envelope text-accent mr-2"></i>Email</h4>
+                                <p>john.smith@example.com</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-accent"><i class="fas fa-map-marker-alt text-accent mr-2"></i>Address</h4>
+                                <p>123 Main St, Hometown, ST 12345</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class=" mt-8 text-center place-items-center">
+            <p class="text-lg">Please help bring my pets home! Thank you for your assistance.</p>
+            <img src="/assets/zsign.png" class="h-20">
+            <p class="text-md">Zairen V. Lapid</p>
+        </footer>
+    </div>
+    <div class="bg"></div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
